@@ -1,7 +1,5 @@
-import os
-
 __author__ = 'Timur'
-
+import os
 import gflags
 import httplib2
 
@@ -81,6 +79,7 @@ def list_all_calendars(google_service):
 def connect_to_google_cal_api_service(client_secret_filename, calendar_oauth_filename):
     oauth_settings = get_oauth_settings_from_file(client_secret_filename)
 
+    # Timur: Code modified from Google's python library docs.
     FLAGS = gflags.FLAGS
 
     # Set up a Flow object to be used if we need to authenticate. This
